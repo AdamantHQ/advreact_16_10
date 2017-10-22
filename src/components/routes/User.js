@@ -6,10 +6,10 @@ import {connect} from 'react-redux';
 
 const UserPage = ({addUser, isAdding, users}) =>
     <div>
-    <h2>User page</h2>
-    <UserForm isAdding = {isAdding} onSubmit = {addUser} />
-    <UserList />
-</div>
+        <h2>User page</h2>
+        <UserForm isAdding = {isAdding} onSubmit = {addUser} />
+        <UserList />
+    </div>
 
 
 export default connect(state => ({ isAdding: loadingStatusSelector(state)}), {addUser})(UserPage)

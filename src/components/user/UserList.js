@@ -5,15 +5,15 @@ import { connect } from 'react-redux';
 const UserList = ({users, deleteUser, isDeleting}) =>
     users.map(({ firstName, lastName, id }) => (
         <div key={id}>
-          <span>
-              {`${firstName} ${lastName}`}
-          </span>
+            <span>
+                {`${firstName} ${lastName}`}
+            </span>
             <span
                 onClick={deleteUser(id)}
                 style={{ color: isDeleting ? 'pink' : 'red', fontSize: 11, cursor: 'pointer' }}
             >
-              Удалить
-          </span>
+                Удалить
+            </span>
         </div>
     ));
 
@@ -23,7 +23,7 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-  deleteUser: id => () => dispatch(deleteUser(id))
+    deleteUser: id => () => dispatch(deleteUser(id))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(UserList);

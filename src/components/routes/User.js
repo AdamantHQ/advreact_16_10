@@ -7,7 +7,7 @@ import {connect} from 'react-redux';
 const UserPage = ({addUser, isAdding, users}) =>
     <div>
     <h2>User page</h2>
-    <UserForm isAdding={isAdding} onSubmit = {addUser} />
+    <UserForm isAdding = {isAdding} onSubmit = {addUser} />
     <UserList />
 </div>
 

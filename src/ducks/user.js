@@ -2,6 +2,7 @@ import {appName} from '../config'
 import {createSelector} from 'reselect'
 import {Record, OrderedMap} from 'immutable'
 import {v4} from 'node-uuid'
+import {reset} from 'redux-form'
 
 /**
  * Constants
@@ -72,11 +73,13 @@ export const addUser = user => dispatch => {
 
     const id = v4();
     setTimeout(
-        () =>
+        () => {
             dispatch({
                 type: ADD_USER_SUCCESS,
-                payload: {id, user: {...user, id}}
-            }),
+                payload: { id, user: { ...user, id } }
+            })
+            dispatch(reset(moduleName))
+        },
         500
     )
 };

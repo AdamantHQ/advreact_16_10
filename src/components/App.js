@@ -17,8 +17,8 @@ class App extends Component {
                 <header>
                     <NavLink exact to = '/' activeStyle = {{color: 'red'}}>Main</NavLink>
                     <NavLink to = '/admin' activeStyle = {{color: 'red'}}>Admin</NavLink>
-                    <NavLink to = '/users' activeStyle = {{color: 'red'}}>Пользователи</NavLink>
-                    <NavLink to = '/auth' activeStyle = {{color: 'red'}}>Авторизация</NavLink>
+                    <NavLink to = '/users' activeStyle = {{color: 'red'}}>Users</NavLink>
+                    <NavLink to = '/auth' activeStyle = {{color: 'red'}}>Auth</NavLink>
                 </header>
                 <h1>Hello world</h1>
                 <ProtectedRoute path = '/admin' component = {AdminPage}/>
